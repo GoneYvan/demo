@@ -1,0 +1,9 @@
+com\company\base\CommonServiceLocator.class
+com\company\base\BaseDO.class
+com\company\base\ApplicationContextManager.class
+com\company\base\ApplicationLogger.class
+com\company\commons\domain\UserDO.class
+com\company\commons\dao\impl\UserDOMapperImpl.class
+com\company\commons\dao\UserDOMapper.class
+com\company\commons\services\UserService.class
+com\company\base\ServiceLocator.class
