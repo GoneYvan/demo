@@ -55,4 +55,19 @@ public class UserController {
         }
     }
 
+    /**
+     * test origin
+     * @param userDO
+     * @return
+     */
+    @RequestMapping("/update1")
+    public JsonResponse update1(UserDO userDO){
+        if(userService.update(userDO)){
+            return JsonResponseUtil.success(null);
+        }else{
+            return JsonResponseUtil.fail();
+        }
+    }
+
+
 }
