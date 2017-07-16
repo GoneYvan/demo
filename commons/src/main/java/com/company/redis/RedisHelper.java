@@ -1,5 +1,6 @@
 package com.company.redis;
 
+import com.company.base.ExceptionUtil;
 import redis.clients.jedis.Jedis;
 
 import java.util.*;
@@ -24,7 +25,7 @@ public class RedisHelper extends RedisProvider {
             jedis = getJedis();
             rtn = jedis.setex(key, EXPIRE, value);
         } catch (Exception e) {
-            //LOG.error(ExceptionUtil.getTrace(e));
+            LOG.addMessage(ExceptionUtil.getTrace(e));
             jedispool.returnBrokenResource(jedis);
         } finally {
             returnResource(jedispool, jedis);

@@ -1,4 +1,4 @@
-package com.company.redis;
+package com.company.base;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

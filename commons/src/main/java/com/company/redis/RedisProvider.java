@@ -1,5 +1,6 @@
 package com.company.redis;
 
+import com.company.base.ExceptionUtil;
 import com.sun.javafx.logging.Logger;
 import org.slf4j.LoggerFactory;
 import redis.clients.jedis.Jedis;
@@ -29,11 +30,11 @@ public class RedisProvider {
 
         JedisPoolConfig jedisconfig = new JedisPoolConfig();
         jedisconfig.setMaxTotal(Integer.valueOf(bundle
-                .getString("redis.pool.maxActive")));
+                .getString("redis.pool.maxTotal")));
         jedisconfig.setMaxIdle(Integer.valueOf(bundle
                 .getString("redis.pool.maxIdle")));
         jedisconfig.setMaxWaitMillis(Long.valueOf(bundle
-                .getString("redis.pool.maxWait")));
+                .getString("redis.pool.maxWaitMillis")));
         jedisconfig.setTestOnBorrow(Boolean.valueOf(bundle
                 .getString("redis.pool.testOnBorrow")));
         jedisconfig.setTestOnReturn(Boolean.valueOf(bundle
@@ -63,6 +64,7 @@ public class RedisProvider {
             pool.returnResource(jedis);
         }
     }
+
 
 //    public static void main(String[] args) {
 //        //连接本地的 Redis 服务
