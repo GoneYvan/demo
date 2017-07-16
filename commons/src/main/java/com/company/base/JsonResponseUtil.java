@@ -51,9 +51,9 @@ public class JsonResponseUtil {
 //        }
     }
 
-    public static void main(String[] a){
-        getInfo(1);
-    }
+//    public static void main(String[] a){
+//        getInfo(1);
+//    }
 
 
 
