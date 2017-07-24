@@ -1,8 +1,9 @@
 package com.company.controller;
 
+import com.company.base.ApplicationLogger;
 import com.company.base.JsonResponse;
 import com.company.base.JsonResponseUtil;
-import com.company.base.ServiceLocator;
+import com.company.commons.services.AllServiceLocator;
 import com.company.commons.domain.UserDO;
 import com.company.commons.services.UserService;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/user")
 public class UserController {
 
-    private UserService userService = ServiceLocator.getUserService();
+    private UserService userService = AllServiceLocator.getUserService();
 
     @RequestMapping("/add")
     public JsonResponse createUser(UserDO userDO){

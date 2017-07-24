@@ -29,11 +29,13 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.8.0-alpha2</version>
         </dependency>
-        <!--<dependency>-->
-            <!--<groupId>org.mybatis</groupId>-->
-            <!--<artifactId>mybatis</artifactId>-->
-            <!--<version>3.4.4</version>-->
-        <!--</dependency>-->
+
+        <!-- rabbitmq消息队列 -->
+        <dependency>
+            <groupId>com.rabbitmq</groupId>
+            <artifactId>amqp-client</artifactId>
+            <version>3.5.5</version>
+        </dependency>
     </dependencies>
 
 </project>

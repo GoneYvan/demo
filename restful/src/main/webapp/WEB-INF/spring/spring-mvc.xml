@@ -10,6 +10,7 @@
 
     <!--启用spring的一些annotation -->
     <context:annotation-config/>
+    <!--<context:spring-configured />-->
     <context:component-scan base-package="com.company.controller">
         <context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/>
     </context:component-scan>
@@ -60,4 +61,5 @@
     <!--静态资源映射-->
     <!--本项目把静态资源放在了WEB-INF的statics目录下，资源映射如下-->
     <mvc:resources mapping="/static/**" location="/static/" cache-period="31556926"/>
+
 </beans>

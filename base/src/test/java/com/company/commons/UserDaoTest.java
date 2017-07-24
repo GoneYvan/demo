@@ -1,6 +1,7 @@
 package com.company.commons;
 
 
+import com.company.base.ApplicationLogger;
 import com.company.baseTest.BaseTest;
 import com.company.commons.dao.UserDOMapper;
 import com.company.commons.domain.UserDO;
