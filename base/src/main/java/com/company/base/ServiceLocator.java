@@ -16,7 +16,7 @@ public class ServiceLocator {
                     "classpath*:/META-INF/spring/service/spring_*.xml"});
             ApplicationContextManager.regist(context);
         } catch (RuntimeException e) {
-//            ApplicationLogger.applicationLogger.error("", e);
+            ApplicationLogger.applicationLogger.error("", e);
             throw e;
         }
     }
